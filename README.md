@@ -169,6 +169,3 @@ All tunable parameters are centralized in `R/00_config.R`:
 - **Core packages**: tidyverse, urca, tseries, PerformanceAnalytics, quantmod, ggplot2
 - **Report**: R Markdown → HTML
 
-## License
-
-This project is for educational and portfolio purposes.
