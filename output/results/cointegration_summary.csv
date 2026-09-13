@@ -1,0 +1,3 @@
+test,evidence,detail,overall_conclusion
+Johansen (trace),Cointegration found,1 cointegrating vector(s),Strong evidence of cointegration
+Engle-Granger,Cointegration found,ADF p-value = 0.0100,Strong evidence of cointegration

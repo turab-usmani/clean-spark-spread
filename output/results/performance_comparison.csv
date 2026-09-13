@@ -1,0 +1,10 @@
+metric,strategy,baseline
+Total P&L (EUR/MWh),-2539.54,117.59
+Annualized P&L (EUR/MWh/yr),-695.33,32.20
+Sharpe Ratio (annualized),-1.96,0.05
+Maximum Drawdown (EUR/MWh),-2602.25,-402.62
+Calmar Ratio,-0.27,0.08
+Hit Rate (%),26.9%,48.3%
+Profit Factor,0.48,1.01
+Best Day (EUR/MWh),213.35,234.11
+Worst Day (EUR/MWh),-166.64,-213.35

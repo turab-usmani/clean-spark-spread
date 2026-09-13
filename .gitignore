@@ -1,0 +1,29 @@
+# R Session and Workspace
+.Rhistory
+.RData
+.Ruserdata
+
+# Sensitive environment variables
+.Renviron
+
+# RStudio files
+.Rproj.user/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Knitr and R Markdown caches
+*_cache/
+*_files/
+report_cache/
+report_files/
+
+# Duplicate Windows double-extension files
+data/raw/*.csv.csv
+
+# Temporary and log files
+*.tmp
+*.log
+scratch/

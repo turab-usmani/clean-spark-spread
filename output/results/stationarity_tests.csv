@@ -1,0 +1,5 @@
+series,n_obs,adf_statistic,p_value,lag_order,conclusion,is_stationary
+Power Price (EUR/MWh),499,-3.1849132852986095,0.09053480327864562,7,Borderline — weak evidence against unit root (p < 0.10),FALSE
+Gas Price (EUR/MWh),499,-2.455156761557628,0.3856358412098416,7,Non-stationary (I(1)) — cannot reject unit root,FALSE
+Carbon Price (EUR/t),499,-3.6771328095183833,0.02528338370015548,7,Stationary (I(0)) — moderate evidence (p < 0.05),TRUE
+Clean Spark Spread,499,-4.825838296309988,0.01,7,Stationary (I(0)) — moderate evidence (p < 0.05),TRUE
