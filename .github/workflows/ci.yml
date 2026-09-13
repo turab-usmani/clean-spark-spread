@@ -28,32 +28,24 @@ jobs:
           r-version: 'release'
           use-public-rspm: true
 
-      - name: Install System Dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libcurl4-openssl-dev libxml2-dev libssl-dev gfortran
-
-      - name: Cache R Packages
-        uses: actions/cache@v4
-        with:
-          path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-r-${{ hashFiles('**/R/*.R', 'main.R', 'report.Rmd') }}
-          restore-keys: |
-            ${{ runner.os }}-r-
-
       - name: Install R Dependencies
-        run: |
-          Rscript -e '
-            required_pkgs <- c(
-              "tidyverse", "httr2", "xml2", "quantmod", "zoo",
-              "tseries", "urca", "PerformanceAnalytics", "xts",
-              "scales", "patchwork", "knitr", "kableExtra", "rmarkdown"
-            )
-            new_pkgs <- required_pkgs[!(required_pkgs %in% installed.packages()[, "Package"])]
-            if (length(new_pkgs) > 0) {
-              install.packages(new_pkgs, repos = "https://cloud.r-project.org", Ncpus = 2)
-            }
-          '
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::tidyverse
+            any::httr2
+            any::xml2
+            any::quantmod
+            any::zoo
+            any::tseries
+            any::urca
+            any::PerformanceAnalytics
+            any::xts
+            any::scales
+            any::patchwork
+            any::knitr
+            any::kableExtra
+            any::rmarkdown
 
       - name: Execute Main Analysis Pipeline
         run: |
