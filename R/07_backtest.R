@@ -31,12 +31,15 @@ run_backtest <- function(df, cost_per_trade = TRANSACTION_COST) {
   result <- df |>
     mutate(
       # Daily change in CSS
-      css_change = css - lag(css),
+      css_change = css - dplyr::lag(css),
       # Position change (detects trades)
-      position_change = position - lag(position),
-      # Daily P&L: position × ΔCSS - cost × |Δposition|
+      position_change = position - dplyr::lag(position, default = 0),
+      # Execution timing: position decided at close of bar t-1 is held during bar t
+      # This strictly eliminates lookahead bias and ensures trades capture next-day moves
+      position_held = dplyr::lag(position, default = 0),
+      # Daily P&L: position_held × ΔCSS - cost × |Δposition|
       # Cost is applied per unit of position change (each leg of a trade)
-      daily_pnl = position * css_change -
+      daily_pnl = position_held * css_change -
                   cost_per_trade * abs(position_change) / 2,
       # Handle first row (no lag available)
       daily_pnl = ifelse(is.na(daily_pnl), 0, daily_pnl),

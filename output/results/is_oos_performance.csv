@@ -1,11 +1,11 @@
 metric,in_sample,out_of_sample,full_sample
 Date Range,2022-01-03 to 2023-12-29,2024-01-02 to 2025-08-29,2022-01-03 to 2025-08-29
 Trading Days,499,416,915
-Strategy Total P&L (EUR/MWh),-1749.64,-789.90,-2539.54
-Strategy Annualized P&L (EUR/MWh),-881.46,-476.88,-695.33
-Strategy Sharpe Ratio,-2.24,-1.56,-1.96
-Strategy Max Drawdown (EUR/MWh),-1765.44,-836.56,-2602.25
-Strategy Hit Rate (%),25.5%,28.8%,26.9%
-Strategy Profit Factor,0.46,0.52,0.48
+Strategy Total P&L (EUR/MWh),2860.77,1649.75,4510.52
+Strategy Annualized P&L (EUR/MWh),1441.24,995.99,1234.98
+Strategy Sharpe Ratio,3.16,3.31,3.15
+Strategy Max Drawdown (EUR/MWh),-173.44,-133.34,-173.44
+Strategy Hit Rate (%),50.3%,59.3%,54.2%
+Strategy Profit Factor,3.42,5.07,3.84
 Baseline Total P&L (EUR/MWh),27.37,90.21,117.59
 Baseline Sharpe Ratio,0.02,0.12,0.05
